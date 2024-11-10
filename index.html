@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <!-- FavIcon -->
+  <link rel="icon" href="favicon.ico" type="image/ico" />
+
+  <!-- Bootstrap -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
+    integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
+    crossorigin='anonymous' />
+
+</head>
+
+<body class="bg-grigio">
+
+
+  <div class=" d-flex justify-content-center mt-3 row">
+    <div class="col-12 d-flex justify-content-center my-3">
+      <h1 class="text-white">Calcola il prezzo del biglietto</h1>
+    </div>
+
+    <div class="container col-12 col-md-6">
+      <div class="card bg-dark text-white m-3 d-flex justify-content-center">
+        <div class="card-header">
+          <h3>Inserimento dati</h3>
+        </div>
+        <form id="user-form" class="m-3">
+
+          <label class="form-label mt-3" for="name">Nome e Cognome</label>
+          <input class="form-control" type="text" name="name" id="name" autocomplete="off" required>
+
+  
+          <label class="form-label mt-3" for="km">Km da percorrere</label>
+          <input class="form-control" type="number" name="km" id="km" autocomplete="off" required>
+  
+  
+          <label class="form-label mt-3" for="age">Età</label>
+          <input class="form-control" type="number" name="age" id="age" autocomplete="off" required>
+  
+          <button class="btn btn-primary my-3" type="submit">Invia</button>
+          <button class="btn btn-outline-primary" type="reset">Cancella</button>
+        </form>
+      </div>
+    </div>
+   
+    <div class="container col-12 col-md-6">
+      <div class="card bg-dark text-white m-3 d-flex justify-content-center">
+        <div class="card-header">
+          <h3>Check out :</h3>
+        </div>
+        <div class="card-body">
+          <p><strong>Nome:</strong> <span id="checkout-name"></span></p>
+          <p><strong>Distanza:</strong> <span id="checkout-distance"></span> km</p>
+          <p><strong>Fascia d'età:</strong> <span id="checkout-state"></span></p>
+          <p><strong>Sconto:</strong> <span id="checkout-discount"></span>%</p>
+          <p><strong>Prezzo Totale:</strong> <span id="checkout-total"></span> €</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <script src="./js/functions.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
