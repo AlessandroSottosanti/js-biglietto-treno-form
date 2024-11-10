@@ -64,12 +64,41 @@
       </div>
     </div>
 
+    <div class="container col-12 col-md-10 ">
+      <div class="card bg-light m-3" >
+        <div class="card-header" id="ticket-header">
+          <h3 class="text-center">Biglietto / Ticket</h3>
+        </div>
+        <div class="card-body">
+          
+          <div class="row">
+            <div class="col-4">
+              <p><strong>Nome:</strong> <span id="ticket-name"></span></p>
+              <p><strong>Distanza:</strong> <span id="ticket-distance"></span> km</p>
+              <p><strong>Fascia d'età:</strong> <span id="ticket-state"></span></p>
+              <p><strong>Sconto:</strong> <span id="ticket-discount"></span></p>
+            </div>
 
+            <div class="col-4">
+              <p><strong>Carrozza:</strong> <span id="ticket-carriage"></span></p>
+              <p><strong>Codice CP:</strong> <span id="ticket-cp"></span></p>
+              <p><strong>Prezzo Totale:</strong> <span id="ticket-total"></span> €</p>
+            </div>
+
+            <div class="col-4">
+              <canvas id="qrcode"></canvas>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
 
   </div>
 
-
-  <script src="./js/functions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

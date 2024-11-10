@@ -22,7 +22,14 @@ let stateCard = document.getElementById("checkout-state");
 let discountCard = document.getElementById("checkout-discount");
 let totalCard = document.getElementById("checkout-total");
 
-
+// Ticket 
+let nameTicket = document.getElementById("ticket-name");
+let distanceTicket = document.getElementById("ticket-distance");
+let stateTicket = document.getElementById("ticket-state");
+let discountTicket = document.getElementById("ticket-discount");
+let totalTicket = document.getElementById("ticket-total");
+let carriageticket = document.getElementById("ticket-carriage");
+let cpTicket = document.getElementById("ticket-cp");
 
 // Esecuzione Logica
 
@@ -78,6 +85,10 @@ formElement.addEventListener("submit", function(event) {
 
         let totTicketPriceTwoDecimals = totTicketPrice.toFixed(2);
 
+
+// Output
+
+
         // Assegnamo i valori alla card
         nameCard.innerHTML = name;
         distanceCard.innerHTML = distance;
@@ -85,8 +96,22 @@ formElement.addEventListener("submit", function(event) {
         discountCard.innerHTML = discountpercent;
         totalCard.innerHTML = totTicketPriceTwoDecimals; 
 
+            // Generazione casuale della carrozza e del codice CP
+        let carriageNumber = Math.floor(Math.random() * 12) + 1;
+        let cpCode = Array.from({length: 5}, () => Math.floor(Math.random() * 10)).join('');
+        console.log(cpCode);
 
-    // Output
+
+        //  Assegnamo i valori per il biglietto
+        nameTicket.innerHTML = name;
+        distanceTicket.innerHTML = distance;
+        stateTicket.innerHTML = state;
+        discountTicket.innerHTML = discountpercent;
+        totalTicket.innerHTML = totTicketPriceTwoDecimals;
+        carriageticket.innerHTML = carriageNumber;
+        cpTicket.innerHTML = cpCode;
+    
+
 
         console.log(`Prezzo biglietto: ${baseTicketPrice.toFixed(2)} euro`); 
 
@@ -95,6 +120,13 @@ formElement.addEventListener("submit", function(event) {
             console.log(`Prezzo finale del biglietto: ${totTicketPriceTwoDecimals} euro`);
         }
         
+        const uniqueCode = `${name}-${cpCode}-${Date.now()}`;
+        // Genera il QR code
+    const qr = new QRious({
+        element: document.getElementById("qrcode"),
+        size: 150,
+        value: uniqueCode 
+      });
 
 
     }

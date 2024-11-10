@@ -1,3 +1,16 @@
 .bg-grigio{
     background-color: #470c53f1;
 }
+
+#ticket-header {
+    background-color: #7e1992f1;
+    color: white;
+}
+
+#qrcode {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
